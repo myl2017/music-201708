@@ -404,6 +404,12 @@ section.globalNavigation .tabs-nav > li{
     background: transparent;
     pointer-events: none;
 }
+.records .hotList.active{
+    display: block;
+}
+.records .hotList{
+    display: none;
+}
 .hotList{
     padding-top: 15px;
     padding-right: 10px;
@@ -429,15 +435,20 @@ section.globalNavigation .tabs-nav > li{
     border: .1px solid rgba(136,136,136,.2);
     border-radius: 32px;
 }
-.history > ol{
+.records .history .history-Info{
+    display: none;
+}
+.records .history .history-Info.active{
+    display: block;
+}
+.history-Info > li{
     padding-top: 15px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-    /*border-bottom: .1px solid rgba(136,136,136,.1);*/
     position: relative;
 }
-.history > ol::after{
+.history-Info > li::after{
     content: '';
     position: absolute;
     top: 45px;
@@ -468,4 +479,21 @@ section.globalNavigation .tabs-nav > li{
     position: relative;
     top: 4px;
     right: 0px;
+}
+.searchResult h3.matchTitle{
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #666;
+    margin-left: 10px;
+}
+.searchResult > li > a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    border-bottom: .1px solid rgba(136,136,136,.1);
+}
+.searchResult .highlight{
+    color: #507daf;
 }
