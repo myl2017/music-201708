@@ -1,0 +1,227 @@
+/********************playlist css******************/
+/*{ outline: 1px solid black}*/
+.playlist-wrap{
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    position: relative;
+}
+.container .head-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent url(//music.163.com/api/img/blur/109951163006142264?param=170y170) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.head-inner::after{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: " ";
+    background-color: rgba(0,0,0,.25);
+}
+.container .head-cover{
+    width: 33.6vw;
+    height: 33.6vw;
+    margin: 8vw 0 8vw 4vw;
+    position: relative;
+    z-index: 1;
+}
+.container .head-cover span.menu{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: 2;
+    padding: 0 8px;
+    color: #fff;
+    font-size: 9px;
+    text-align: center;
+    line-height: 17px;
+    background-color: rgba(217,48,48,.8);
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+}
+.container .head-cover  span.listen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 108px;
+    z-index: 2;
+    background-image: linear-gradient(90deg,transparent,rgba(0,0,0,.2));
+}
+.head-cover .listen .icon-headset{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 3px;
+    right: 45px;
+}
+.head-cover .listen .listen-num{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+}
+.container .head-cover img{
+    width: 100%;
+}
+.container .head-text{
+    width: 55.5vw;
+    margin: 8vw 5vw 8vw 4vw;
+    position: relative;
+    z-index: 1;
+}
+.container .head-text h1{
+    font-size: 17px;
+    line-height: 1.3;
+    color: #fefefe;
+}
+.container .head-text .avatar-link{
+    display: flex;
+    margin-top: 8vw;
+    margin-bottom: 6vw;
+    color: hsla(0,0%,100%,.7);
+    line-height: 8vw;
+}
+.avatar-link .avatar{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid;
+    vertical-align: middle;
+    margin-right: 5px;
+    overflow: hidden;
+}
+.container .avatar-link .avatar img{
+    width: 100%;
+}
+
+.introduce{
+    position: absolute;
+    top: 49.6vw;
+    left: 0;
+    margin: 0 2.66vw 0 4vw;
+    padding-top: 2.66vw;
+    color: #666;
+}
+.introduce .tags span{
+    display: inline-block;
+    margin-right: 2.66vw;
+    padding: 1px 2.13vw;
+    font-size: 12px;
+    border-radius: 9999px;
+    border: .1px solid rgba(0,0,0,.1);
+}
+.introduce .intro .closed-intro.active{
+    display: block;
+}
+.closed-intro .closeButton{
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    background: url(./images/closedintro.png) no-repeat;
+    background-size: 12px auto;
+    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding-top: 8px;
+}
+
+.lists{
+    position: absolute;
+    top: 310px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+}
+.lists .title{
+    line-height: 23px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #666;
+    background-color: #eeeff0;
+}
+.lists{ font-size: 17px;}
+.lists .loading{
+    position: relative;
+}
+.lists .loading > img{
+    position: absolute;
+    top: 0;
+    left: 45%;
+    margin-bottom: 50px;
+}
+.order{
+    padding: 17px 9px 17px 0;
+    align-items: center;
+    align-items: center;
+    color: #999;
+}
+.list > li > a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    border-bottom: .1px solid rgba(136,136,136,.1);
+}
+.songInfo{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.songInfo h3{
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
+    width: 78.6vw;
+}
+.songInfo h3 > span{
+    color: #888;
+    margin-left: 4px;
+}
+.songInfo .songIntroduce{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break:  normal;
+    width: 78.6vw;
+}
+.songInfo .songIntroduce > span{
+    font-size: 12px;
+    color: #888;
+}
+.songInfo .songIntroduce > i.icon-sq{
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    margin-right: 4px;
+    background: url(./images/sprite.png) no-repeat;
+    background-size: 166px 97px;
+}
+.playButton{
+    padding: 16px 10px;
+}
+.playButton > span{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(./images/sprite.png) no-repeat;
+    background-size: 166px 97px;
+    background-position: -24px 0;
+    vertical-align: bottom;
+}
+
+

@@ -44,7 +44,8 @@
         <div class="pannel-1 active">
             <div class="recommendList">
                 <h2 class="pannel1Title">推荐歌单</h2>
-                <ol class="recommendSongs">
+                <ol class="recommendSongs"></ol>
+                <!-- <ol class="recommendSongs">
                     <li>
                         <a href="#">
                             <div class="cover">
@@ -99,13 +100,13 @@
                             <p class="remd-summary">【旋律控】超级好听的英文歌</p>
                         </a>
                     </li>
-                </ol>
+                </ol>-->
             </div>
             <div class="newestList">
                 <h2 class="pannel1Title">最新音乐</h2>
-                <!--div class="loading"><img src="./images/loading.gif" alt=""> </div-->
-                <!--ol class="newestSongs"></ol-->
-                <ol class="newestSongs">
+                <div class="loading"><img src="./images/loading.gif" alt=""> </div>
+                <ol class="newestSongs"></ol>
+                <!--<ol class="newestSongs">
                     <li>
                         <a href="./song.html">
                             <div class="songInfo">
@@ -196,7 +197,7 @@
                             <div class="playButton"><span></span></div>
                         </a>
                     </li>
-                </ol>
+                </ol>-->
             </div>
             <section class="art">
                 <div class="logo">
@@ -212,6 +213,9 @@
                 <div class="hotDate">更新日期：08月24日</div>
             </div>
             <div class="hotSongList">
+                <div class="loading"><img src="./images/loading.gif" alt=""> </div>
+                <ol class="hotSongs"></ol>
+                <!--
                 <ol class="hotSongs">
                     <li>
                         <a href="#">
@@ -414,6 +418,7 @@
                     </a>
                     </li>
                 </ol>
+                -->
                 <div class="viewAll">
                     <a class="hotViewLink" href="#">查看完整榜单 <span class="greaterThan">&gt;</span></a>
                 </div>
@@ -429,8 +434,11 @@
                     <svg class="icon-closed"><use xlink:href="#icon-close1"></use></svg>
                 </div>
             </form>
+            <div class="matchList">
+                <ol class="searchResult"></ol>
+            </div>
             <div class="records">
-                <section class="hotList">
+                <section class="hotList active">
                     <h3>热门搜索</h3>
                     <ol>
                         <li><a class="link" href="javascript:void(0);">那年花开月正圆</a></li>
@@ -446,14 +454,14 @@
                     </ol>
                 </section>
                 <section class="history">
-                    <ol>
-                        <li>
+                    <ol class="history-Info">
+                        <!--<li>
                             <svg class="icon-lishi"><use xlink:href="#icon-lishi"></use></svg>
                             <div class="lishiInfo">
-                                <div class="lishiName">告白气球</div>
+                                <div class="lishiName"><a href="#">告白气球</a></div>
                             </div>
                             <svg class="icon-clear"><use xlink:href="#icon-guanbixiao"></use></svg>
-                        </li>
+                        </li>-->
                     </ol>
                 </section>
             </div>
@@ -469,7 +477,7 @@
 <script src="//at.alicdn.com/t/font_398699_pnqe8vp2eq9z4cxr.js"></script>
 <script src="//at.alicdn.com/t/font_398792_kc3q16219wpi7ldi.js"></script>
 <script>
-    var APP_ID = 'OMQXBveTUe6kYL2FhTgMifDW-gzGzoHsz';
+    /*var APP_ID = 'OMQXBveTUe6kYL2FhTgMifDW-gzGzoHsz100';
     var APP_KEY = 'AiCeCcmMFUfb5A1Otd1yo1VO';
 
     AV.init({
@@ -488,7 +496,6 @@
         describe:'Jay Chou，周杰伦的床边故事'
     }).then(function (object) {
         alert('success')
-    })
-
+    })*/
 </script>
 </html>
