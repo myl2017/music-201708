@@ -499,6 +499,13 @@ section.globalNavigation .tabs-nav > li{
     color: #666;
     margin-left: 10px;
 }
+.searchResult p.empty{
+    margin-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #507daf;
+}
 .searchResult > li > a{
     display: flex;
     justify-content: space-between;
