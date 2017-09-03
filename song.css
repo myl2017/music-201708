@@ -58,6 +58,8 @@
 .disc-container .cover{
     width: 49vw;
     position: absolute;
+    top: 65px;
+    left: 105px;
     border-radius: 50%;
     animation: circle 20s infinite linear;
     animation-play-state: paused;
