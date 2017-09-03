@@ -52,8 +52,10 @@
     width: 79vw;
 }
 .disc-container .disc .light{
-    width: 79vw;
+    width: 79.5vw;
     position: absolute;
+    top: 0;
+    left: 40px;
 }
 .disc-container .cover{
     width: 49vw;
