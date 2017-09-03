@@ -119,6 +119,11 @@ $('input#search').on('input',function(e){
         request.setRequestHeader("Content-Type", "application/json");
         request.onload = function () {
             let data = JSON.parse(request.responseText)
+            $('.searchResult').empty()
+            if(data === undefined){
+               $('.searchResult').append(`<p class="empty">没有找到结果</p>`)
+               return
+            }
             for(let i=0; i<data.length;i++){
                 if(data[i].name.includes(value)||data[i].singer.includes(value)||data[i].album.includes(value)){
                     let $li = `
@@ -143,7 +148,6 @@ $('input#search').on('input',function(e){
                              </svg>
                         </li>
                 `
-                    $('.searchResult').empty()
                     $('.searchResult').append(`<h3 class="matchTitle">最佳匹配</h3>`+$li)
                     $('.records .history .history-Info').addClass('active').append($records)
                 }
@@ -154,7 +158,12 @@ $('input#search').on('input',function(e){
 })
 
 function  clearRecords(id) {
-    let current = "li[data-id='"+ id +"']"
-    let $li =  $(current)
-    $li.remove()
+    let li = "li[data-id='"+ id +"']"
+    $(li).remove()
 }
+$('.clearInput').on('click',function(e){
+    $('input#search').val('')
+})
+$('input#search').on('focus',function (e) {
+    $('.holder').empty()
+})
