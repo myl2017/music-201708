@@ -60,11 +60,29 @@
 .disc-container .cover{
     width: 49vw;
     position: absolute;
-    top: 63px;
-    left: 105px;
+    top: 57px;
+    left: 97px;
     border-radius: 50%;
     animation: circle 20s infinite linear;
     animation-play-state: paused;
+}
+@media (min-width:414px) {
+    .disc-container .cover{
+        top: 62px;
+        left: 106px;
+    }
+}
+@media (max-width:375px) {
+    .disc-container .cover{
+        top: 55px;
+        left: 95px;
+    }
+}
+@media (max-width: 320px) {
+    .disc-container .cover{
+        top: 47px;
+        left: 82px;
+    }
 }
 .disc > img.playing{
     animation-play-state: running;
