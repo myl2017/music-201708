@@ -187,7 +187,16 @@ section.globalNavigation .tabs-nav > li{
 }
 .newestList .loading > img{
     position: absolute;
-    top: 0;
+    top: 80px;
+    left: 45%;
+    margin-bottom: 50px;
+}
+.hotSongList .loading{
+    position: relative;
+}
+.hotSongList .loading > img{
+    position: absolute;
+    top: 80px;
     left: 45%;
     margin-bottom: 50px;
 }
