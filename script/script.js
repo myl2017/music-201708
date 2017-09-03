@@ -111,8 +111,7 @@ $('input#search').on('input',function(e){
         request.open('POST','./database.json')
         request.setRequestHeader("Content-Type", "application/json");
         request.onload = function () {
-            let response = JSON.stringify(request.responseText)
-            let data = JSON.parse(response)
+            let data = JSON.parse(request.responseText)
             for(let i=0; i<data.length;i++){
                 if(data[i].name.includes(value)||data[i].singer.includes(value)||data[i].album.includes(value)){
                     let $li = `
