@@ -108,7 +108,7 @@ $('input#search').on('input',function(e){
         let value = $input.val().trim()
         if(value===''){return}
         let request= new XMLHttpRequest()
-        request.open('POST','./database.json')
+        request.open('POST','https://myl2017.github.io/music-201708/database.json')
         request.setRequestHeader("Content-Type", "application/json");
         request.onload = function () {
             let data = JSON.parse(request.responseText)
