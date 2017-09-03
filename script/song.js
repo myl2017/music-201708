@@ -19,23 +19,18 @@ $(function(){
     })
 
     function play(url){
-        let audio = document.createElement('audio')
-        audio.src = url
-        /*audio.oncanplay = function () {
-            audio.play()
-            add()
-        }*/
-        $('.icon-play').on('touchstart',function () {
-            audio.play()
+        let video = document.createElement('video')
+        video.src = url
+        $('.icon-play').on('touchstart click',function () {
+            video.play()
             add()
         })
-        $('.icon-pause').on('touchstart',function () {
-            audio.pause()
+        $('.icon-pause').on('touchstart click',function () {
+            video.pause()
             remove()
         })
-
         setInterval(()=>{
-            let seconds = audio.currentTime
+            let seconds = video.currentTime
             let munites = ~~(seconds / 60)
             let left = seconds - munites * 60
             let time = `${full(munites)}:${full(left)}`
