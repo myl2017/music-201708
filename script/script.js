@@ -83,6 +83,12 @@ $(function () {
             }
         })
         $('.hotSongList .loading').remove()
+        let $viewAll = `               
+                        <div class="viewAll">
+                              <a class="hotViewLink" href="#">查看完整榜单 <span class="greaterThan">&gt;</span></a>
+                        </div>
+                        `
+        $('.hotsonglist .hotSongs').next($viewAll)
     },function (error) {
         alert('error!!!')
     })
