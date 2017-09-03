@@ -187,7 +187,7 @@ section.globalNavigation .tabs-nav > li{
 }
 .newestList .loading > img{
     position: absolute;
-    top: 80px;
+    top: 0;
     left: 45%;
     margin-bottom: 50px;
 }
@@ -196,7 +196,7 @@ section.globalNavigation .tabs-nav > li{
 }
 .hotSongList .loading > img{
     position: absolute;
-    top: 80px;
+    top: 0;
     left: 45%;
     margin-bottom: 50px;
 }
