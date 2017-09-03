@@ -54,7 +54,7 @@ $(function () {
             if(i.isHot === 1){
                 $li= $(`
                     <li>
-                        <a href="./song.html?id=${data[i].id}">
+                        <a href="./song.html?id=${i.id}">
                             <div class="order song-hot">0${index += 1}</div>
                             <div class="songInfo">
                                 <h3>${i.name}<span></span></h3>
@@ -68,7 +68,7 @@ $(function () {
             }else{
                  $li2= $(`
                     <li>
-                        <a href="./song.html?id=${data[i].id}">
+                        <a href="./song.html?id=${i.id}">
                             <div class="order">${i.id>=10 ? i.id + '' : '0' + i.id}</div>
                             <div class="songInfo">
                                 <h3>${i.name}<span></span></h3>
@@ -108,7 +108,7 @@ $('input#search').on('input',function(e){
         let value = $input.val().trim()
         if(value===''){return}
         let request= new XMLHttpRequest()
-        request.open('POST','./database.json')
+        request.open('GET','./database.json')
         request.setRequestHeader("Content-Type", "application/json");
         request.onload = function () {
             let data = JSON.parse(request.responseText)
