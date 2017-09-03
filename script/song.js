@@ -11,9 +11,9 @@ $(function(){
         let song = songs.filter(s=>s.id === id)[0]
         let {url,name,singer,lyric,pagebg,cover} = song
 
+        play(url)
         initImg(pagebg,cover)
         initSongInfo(name,singer,lyric)
-        play(url)
     },function () {
         console.log('error')
     })
@@ -21,10 +21,10 @@ $(function(){
     function play(url){
         let audio = document.createElement('audio')
         audio.src = url
-        audio.oncanplay = function () {
+        /*audio.oncanplay = function () {
             audio.play()
             add()
-        }
+        }*/
         $('.icon-play').on('touchstart',function () {
             audio.play()
             add()
