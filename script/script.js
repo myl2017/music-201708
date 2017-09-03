@@ -148,10 +148,11 @@ $('input#search').on('input',function(e){
                              </svg>
                         </li>
                 `
-                   $('.searchResult').append($li).prev(`<h3 class="matchTitle">最佳匹配</h3>`)
+                   $('.searchResult').append($li)
                    $('.records .history .history-Info').addClass('active').append($records)
                 }
             }
+             $('.searchResult').prepend(`<h3 class="matchTitle">最佳匹配</h3>`);
         }
         request.send()
     },400)
