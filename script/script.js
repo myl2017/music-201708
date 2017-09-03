@@ -22,6 +22,7 @@ $(function () {
                 return
             }
         })
+        $('.recommendList .loading').remove()
     })
     $.get('./database.json').then(function (response) {
         let songs = response
