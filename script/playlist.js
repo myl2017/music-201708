@@ -11,7 +11,7 @@ $(function () {
                         <a href="./song.html?&id=${i.id}">
                             <div class="order song-hot">${i.id}</div>
                             <div class="songInfo">
-                                <h3>${i.name}<span>${i.album}</span></h3>
+                                <h3>${i.name}<span>(${i.album})</span></h3>
                                 <div class="songIntroduce"><span>${i.singer} - ${i.description}</span></div>
                             </div>
                             <div class="playButton"><span></span></div>
