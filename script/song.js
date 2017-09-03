@@ -21,10 +21,10 @@ $(function(){
     function play(url){
         let audio = document.createElement('audio')
         audio.src = url
-        /*audio.oncanplay = function () {
+        audio.oncanplay = function () {
             audio.play()
             add()
-        }*/
+        }
         $('.icon-play').on('touchstart',function () {
             audio.play()
             add()
