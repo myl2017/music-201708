@@ -110,7 +110,8 @@ $('input#search').on('input',function(e){
         let request= new XMLHttpRequest()
         request.open('POST','./database.json')
         request.onload = function () {
-            let data = JSON.parse(request.responseText)
+            let reponse = JSON.stringify(request.responseText)
+            let data = JSON.parse(reponse)
             for(let i=0; i<data.length;i++){
                 if(data[i].name.includes(value)||data[i].singer.includes(value)||data[i].album.includes(value)){
                     let $li = `
