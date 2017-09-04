@@ -19,19 +19,22 @@ $(function(){
     })
 
     function play(url){
-        let video = document.createElement('video')
-        video.src = url
-        video.play()
-        $('.icon-play').on('touchstart click',function () {
-            video.play()
+        var audio = document.createElement('audio')
+        audio.src= url
+        document.body.appendChild(audio)
+        $('.icon-play').on('click',function(){
+            audio.play()
             add()
         })
-        $('.icon-pause').on('touchstart click',function () {
-            video.pause()
+        $('.icon-pause').on('click',function(){
+            audio.pause()
             remove()
         })
+        audio.onended =function(){
+            remove()
+        }
         setInterval(()=>{
-            let seconds = video.currentTime
+            let seconds = audio.currentTime
             let munites = ~~(seconds / 60)
             let left = seconds - munites * 60
             let time = `${full(munites)}:${full(left)}`
