@@ -12,12 +12,9 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: transparent url(http://p4.music.126.net/ry6_7MKyDHghTWE42--XLw==/17680146974920131.jpg) no-repeat center;
     background-size: cover;
     position: relative;
-    z-index: -1;
 }
 .page::after{
     content: '';
@@ -54,38 +51,14 @@
 .disc-container .disc .light{
     width: 79vw;
     position: absolute;
-    top: 0;
-    left: 45px;
 }
 .disc-container .cover{
     width: 49vw;
     position: absolute;
-    top: 57px;
-    left: 97px;
     border-radius: 50%;
-    animation: circle 20s infinite linear;
-    animation-play-state: paused;
-}
-@media (min-width:414px) {
-    .disc-container .cover{
-        top: 62px;
-        left: 106px;
-    }
-}
-@media (max-width:375px) {
-    .disc-container .cover{
-        top: 55px;
-        left: 95px;
-    }
-}
-@media (max-width: 320px) {
-    .disc-container .cover{
-        top: 47px;
-        left: 82px;
-    }
 }
 .disc > img.playing{
-    animation-play-state: running;
+    animation: circle 20s infinite linear;
 }
 .icon-wrap{
     display: flex;
@@ -110,6 +83,7 @@
 .icon-wrap .icon-pause{ display: none;}
 .icon-wrap.playing .icon-pause{ display: block;}
 .icon-wrap.playing .icon-play{ display: none;}
+.icon-wrap .icon-play{ display: block;}
 
 .song-description{
     flex-grow: 1;
@@ -148,13 +122,10 @@
 }
 .song-description .lines{
     transform: translateY(-5px);
-    transition: tranform .3s;
-    color: white;
 }
 .song-description p.active{
-    color: white;
-}
 
+}
 .page > .links{
     display: flex;
     justify-content: center;
