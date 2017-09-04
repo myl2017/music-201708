@@ -54,7 +54,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 135px;
+    bottom: 125px;
     z-index: 2;
     background-image: linear-gradient(90deg,transparent,rgba(0,0,0,.2));
 }
@@ -74,6 +74,8 @@
 }
 .container .head-cover img{
     width: 100%;
+    position: relative;
+    z-index: 5;
 }
 .container .head-text{
     width: 55.5vw;
@@ -94,8 +96,8 @@
     line-height: 8vw;
 }
 .avatar-link .avatar{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 1px solid;
     vertical-align: middle;
@@ -104,6 +106,8 @@
 }
 .container .avatar-link .avatar img{
     width: 100%;
+    position: relative;
+    z-index:5
 }
 
 .introduce{
