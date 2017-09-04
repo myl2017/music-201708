@@ -21,6 +21,7 @@ $(function(){
     function play(url){
         let video = document.createElement('video')
         video.src = url
+        video.play()
         $('.icon-play').on('touchstart click',function () {
             video.play()
             add()
