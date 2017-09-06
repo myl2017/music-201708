@@ -1,46 +1,71 @@
 /********************playlist css******************/
-/*{ outline: 1px solid black}*/
 .playlist-wrap{
-    display: flex;
-    flex-direction: column;
-}
-.container {
+    background-color: #f8f8f8;
+    min-height: 100%;
     position: relative;
-}
-.container .head-inner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent url(//music.163.com/api/img/blur/109951163006142264?param=170y170) no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
     z-index: 0;
 }
-.head-inner::after{
+.head{
+    position: relative;
+    padding: 30px 10px 30px 15px;
+    overflow: hidden;
+}
+.head .head-bg{
     position: absolute;
-    top:0;
     left: 0;
+    top: 0;
     right: 0;
     bottom: 0;
+    z-index: 0;
+    background-image: url(//p4.music.126.net/YpsjEcuFrOvAupBNOnnZNQ==/18903903416681137.jpg?param=170y170);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.head .head-bg::after{
     content: " ";
     background-color: rgba(0,0,0,.25);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
 }
-.container .head-cover{
+.head .head-inner{
+    display: flex;
+}
+.head .head-inner .cover{
     width: 33.6vw;
     height: 33.6vw;
-    margin: 8vw 0 8vw 4vw;
+    overflow: hidden;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
-.container .head-cover span.menu{
-    display: inline-block;
+.head .head-inner .cover:after{
+    content: " ";
     position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 18px;
+    z-index: 2;
+    background-image: linear-gradient(90deg,transparent,rgba(0,0,0,.2));
+}
+.head-inner .cover img{
+    width: 100%;
+}
+.head-inner .cover .song-menu{
+    position: absolute;
+    z-index: 3;
     top: 10px;
     left: 0;
-    z-index: 2;
     padding: 0 8px;
+    height: 17px;
     color: #fff;
     font-size: 9px;
     text-align: center;
@@ -49,70 +74,59 @@
     border-top-right-radius: 17px;
     border-bottom-right-radius: 17px;
 }
-.container .head-cover  span.listen{
+.head-inner .cover .listen{
     position: absolute;
+    right: 2px;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 130px;
-    z-index: 2;
-    background-image: linear-gradient(90deg,transparent,rgba(0,0,0,.2));
+    z-index: 1;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 12px;
+    text-shadow: 1px 0 0 rgba(0,0,0,.15);
 }
-.head-cover .listen .icon-headset{
-    width: 12px;
-    height: 12px;
+.listen > .icon-headset{
     position: absolute;
     top: 3px;
-    right: 45px;
+    right: 40px;
+    width: 12px;
+    height: 12px;
+
 }
-.head-cover .listen .listen-num{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    color: white;
-}
-.container .head-cover img{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-.container .head-text{
-    width: 55.5vw;
-    margin: 8vw 5vw 8vw 4vw;
+.head-inner .text{
     position: relative;
-    z-index: 1;
+    z-index: 0;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-left: 16px;
 }
-.container .head-text h1{
+.head-inner .text > h1{
+    padding-top: 1px;
     font-size: 17px;
     line-height: 1.3;
     color: #fefefe;
 }
-.container .head-text .avatar-link{
+.head-inner .text a.avatar-link{
     display: flex;
-    margin-top: 8vw;
-    margin-bottom: 6vw;
+    position: relative;
+    margin-top: 20px;
     color: hsla(0,0%,100%,.7);
-    line-height: 8vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: normal;
 }
-.avatar-link .avatar{
-    width: 25px;
-    height: 25px;
+.text .avatar-link .avatar{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    border: 1px solid;
     vertical-align: middle;
     margin-right: 5px;
-    overflow: hidden;
 }
-.container .avatar-link .avatar img{
+.text .avatar-link img{
     width: 100%;
-    position: relative;
-    z-index:5;
-    margin-bottom: 12px;
+    border-radius: 50%;
 }
-
 .introduce{
     position: absolute;
     top: 49.6vw;
@@ -120,6 +134,24 @@
     margin: 0 2.66vw 0 4vw;
     padding-top: 2.66vw;
     color: #666;
+}
+@media (min-width:768px){
+    .introduce{
+        top: 39.6vw;;
+    }
+}
+@media (min-width:1024px){
+    .introduce{
+        top: 37.6vw;;
+    }
+}
+@media (min-width:1440px){
+    .introduce{
+        top: 36vw;;
+    }
+}
+.introduce .tags{
+    margin-bottom: 10px;
 }
 .introduce .tags span{
     display: inline-block;
@@ -129,26 +161,76 @@
     border-radius: 9999px;
     border: .1px solid rgba(0,0,0,.1);
 }
-.introduce .intro .closed-intro.active{
-    display: block;
+.intro{
+    line-height: 19px;
+    color: #666;
 }
-.closed-intro .closeButton{
+.introduce .intro .intro-text{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 54px;
+}
+.arrowdown{
     display: inline-block;
     width: 4vw;
     height: 4vw;
-    background: url(./images/closedintro.png) no-repeat;
+    background-image: url(./images/arrowdown.png);
+    background-repeat: no-repeat;
     background-size: 12px auto;
-    vertical-align: middle;
+    vertical-align: bottom;
     position: absolute;
-    bottom: 0;
-    right: 10px;
-    padding-top: 8px;
+    bottom: -25px;
+    right: 0;
+}
+.arrowup2{
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;
+    background-image: url(./images/arrowup.png);
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+}
+@media (min-width:768px){
+    .arrowdown{
+        bottom: -45px;
+        right: -15px;
+    }
+    .arrowup{
+        bottom: -45px;
+        right: -15px;
+    }
+}
+@media (min-width:1024px){
+    .arrowdown{
+        bottom: -55px;
+        right: -25px;
+    }
+    .arrowup{
+        bottom: -55px;
+        right: -25px;
+    }
+}
+@media (min-width:1440px){
+    .arrowdown{
+        bottom: -65px;
+        right: -35px;
+    }
+    .arrowup{
+        bottom: -65px;
+        right: -35px;
+    }
 }
 
 .lists{
     position: absolute;
-    top: 310px;
-    bottom: 0;
+    bottom: -501px;
     left: 0;
     right: 0;
     z-index: 4;
@@ -229,4 +311,36 @@
     background-size: 166px 97px;
     background-position: -24px 0;
     vertical-align: bottom;
+}
+
+.footer{
+    position: fixed;
+    background-color: #fff;
+    padding: 7px 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+}
+.footer .collect-songs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .collect-songs .icon-wangyi{
+    display: inline-block;
+    width: 21px;
+    height: 23px;
+    position: absolute;
+    top: 27%;
+    left: 36%;
+}
+.footer .collect-songs span{
+    display: inline-block;
+    color: #fff;
+    background-color: #d43b32;
+    border-color: #d43b32;
+    padding: 10px 129px;
+    border-radius: 36px;
 }
