@@ -57,6 +57,45 @@
     position: absolute;
     border-radius: 50%;
 }
+
+@media (min-width:414px) {
+    .disc-container .cover{
+        top: 62px;
+        left: 106px;
+    }
+}
+@media (min-width:768px) {
+    .disc-container .cover{
+        top: 115px;
+        left: 196px;
+    }
+}
+@media (min-width:1024px) {
+    .disc-container .cover{
+        top: 153px;
+        left: 260px;
+    }
+}
+@media (min-width:1440px) {
+    .disc-container .cover{
+        top: 214px;
+        left: 366px;
+    }
+}
+
+@media (max-width:375px) {
+    .disc-container .cover{
+        top: 55px;
+        left: 95px;
+    }
+}
+@media (max-width: 320px) {
+    .disc-container .cover{
+        top: 47px;
+        left: 81px;
+    }
+}
+
 .disc > img.playing{
     animation: circle 20s infinite linear;
 }
