@@ -31,6 +31,7 @@ $(function () {
         response.forEach((i)=>{
             let $li,$li2
             if(i.isHot === 1){
+                index += 1
                 $li= hotSongsTemplate(i,index)
                 $('.hotSongList .hotSongs').append($li)
             }else{
@@ -79,7 +80,7 @@ function  newestTemplate(i) {
 function hotSongsTemplate(i,index) {
     return $(`<li>
                    <a href="./song.html?id=${i.id}">
-                        <div class="order song-hot">0${index += 1}</div>
+                        <div class="order song-hot">0${index}</div>
                             <div class="songInfo">
                                 <h3>${i.name}<span></span></h3>
                                 <div class="songIntroduce"><i class="icon-sq"> </i><span>${i.singer} - ${i.name}</span></div>
