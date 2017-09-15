@@ -169,17 +169,17 @@
   },
   {
     "id":13,
-    "name":"Pizza",
-    "singer":"Martin Garrix",
-    "album":"Pizza",
-    "url":"http://ovg4f07xy.bkt.clouddn.com/Pizza.mp3",
-    "description":"Pizza",
+    "name":"Before You Break My Heart",
+    "singer":"Stevie Hoang",
+    "album":"All For You",
+    "url":"http://ovg4f07xy.bkt.clouddn.com/Heart.mp3",
+    "description":"All For You",
     "isHot": 0,
     "hotSearch": "no",
     "listener": 100.7,
     "lyric":"纯音乐，无歌词",
-    "cover":"http://p1.music.126.net/t7Xf1IhpEJYC8ZaF5EYdnw==/17767008393666187.jpg?imageView&thumbnail=360y360&quality=75&tostatic=0",
-    "pagebg":"http://p3.music.126.net/t7Xf1IhpEJYC8ZaF5EYdnw==/17767008393666187.jpg"
+    "cover":"http://p1.music.126.net/QRvYAvEcmLCX1Bup4yXWyg==/881808325521842.jpg?imageView&thumbnail=360y360&quality=75&tostatic=0",
+    "pagebg":"http://p4.music.126.net/HuA6SFK9HY77q-SRFc6j6Q==/2332064162532611.jpg"
   },
   {
     "id":14,
@@ -323,17 +323,17 @@
   },
   {
     "id":24,
-    "name":"Pizza",
-    "singer":"Martin Garrix",
-    "album":"Pizza",
-    "url":"http://ovg4f07xy.bkt.clouddn.com/Pizza.mp3",
-    "description":"Pizza",
+    "name":"Before You Break My Heart",
+    "singer":"Stevie Hoang",
+    "album":"All For You",
+    "url":"http://ovg4f07xy.bkt.clouddn.com/Heart.mp3",
+    "description":"All For You",
     "isHot": 2,
-    "hotSearch": "Pizza",
-    "listener": 178.9,
+    "hotSearch": "Heart",
+    "listener": 100.7,
     "lyric":"纯音乐，无歌词",
-    "cover":"http://p1.music.126.net/t7Xf1IhpEJYC8ZaF5EYdnw==/17767008393666187.jpg?imageView&thumbnail=360y360&quality=75&tostatic=0",
-    "pagebg":"http://p3.music.126.net/t7Xf1IhpEJYC8ZaF5EYdnw==/17767008393666187.jpg"
+    "cover":"http://p1.music.126.net/QRvYAvEcmLCX1Bup4yXWyg==/881808325521842.jpg?imageView&thumbnail=360y360&quality=75&tostatic=0",
+    "pagebg":"http://p4.music.126.net/HuA6SFK9HY77q-SRFc6j6Q==/2332064162532611.jpg"
   },
   {
     "id":25,
