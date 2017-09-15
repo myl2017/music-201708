@@ -34,7 +34,7 @@ function headTemplate(i) {
                      <img src="${i.cover}" alt=""/>
                      <div class="song-menu">歌单</div>
                      <div class="listen">
-                          <svg class="icon-headset"><use xlink:href="#icon-erjiicon"></use></svg><small class="listen-num">${i.listener}</small>
+                          <svg class="icon-headset"><use xlink:href="#icon-erjiicon"></use></svg><small class="listen-num">${i.listener}万</small>
                      </div>
                 </div>
                 <div class="text">
