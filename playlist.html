@@ -4,34 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>播放列表</title>
+    <title>网易云音乐</title>
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./playlist.css">
 </head>
 <body>
     <div class="playlist-wrap">
-        <section class="head">
-            <div class="head-bg"></div>
-            <div class="head-inner">
-                <div class="cover">
-                    <img src="https://p1.music.126.net/YpsjEcuFrOvAupBNOnnZNQ==/18903903416681137.jpg?imageView&thumbnail=253x0&quality=75&tostatic=0&type=jpg" alt=""/>
-                    <div class="song-menu">歌单</div>
-                    <div class="listen">
-                        <svg class="icon-headset"><use xlink:href="#icon-erjiicon"></use></svg><small class="listen-num">246.6万</small>
-                    </div>
+        <div class="top-container">
+            <section class="head">
+                <div class="head-bg"></div>
+                <div class="head-inner">
+
                 </div>
-                <div class="text">
-                    <h1>那一年，你正年轻，总觉得明天肯定会很美</h1>
-                    <a class="avatar-link" href="#">
-                        <div class="avatar">
-                            <img src="https://p1.music.126.net/fYnHxNey4jtss6IpOAZy4w==/109951163008480821.jpg?imageView&thumbnail=61x0&quality=75&tostatic=0&type=jpg" alt=""/>
-                        </div>
-                        明石-Akashi
-                    </a>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <section class="introduce">
             <div class="tags">标签：
                 <span>日本</span>
@@ -39,12 +26,12 @@
                 <span>另类/独立</span>
             </div>
             <div class="intro">
-                <div class="intro-text">
-                    <p>简介：涩谷系最初是涉谷店头的销售排行榜高居榜首的音乐的统称。进入21世纪，涩谷系进化成了后涩谷（post-shibuya kei/neo-shibuya kei）后涩谷主要是以西洋音乐为骨架拼接，构建的东洋电音舞曲。充满中毒性强的鼓点和可听性爆表的旋律，动漫化的音效处理游弋于不同次元。在音乐的变革中，涩谷系一直在不断吸收外界音乐的特质，也在一直进化成一个独特但并不难接受的音乐风格。涩谷系实验乐和流行乐兼并，不仅对于在日本音乐中有广泛影响，在欧美音乐中也可以看见他们的影子。这里选取了几首优质的后涩谷，enjoy it！<br/></p>
-                    <p>by 符卡 封面 桑</p>
+                <div class="detail active">
                 </div>
-                <span class="arrowdown"></span>
-                <span class="arrowup"></span>
+                <div class="arrows">
+                    <span class="arrowdown"></span>
+                    <span class="arrowup"></span>
+                </div>
             </div>
         </section>
         <section class="lists">
@@ -53,16 +40,16 @@
             <ol class="list">
             </ol>
         </section>
+        <section class="footer">
+            <div class="collect-songs">
+                <svg class="icon-wangyi"><use xlink:href="#icon-wangyi"></use></svg>
+                <span>收藏歌单</span>
+            </div>
+        </section>
     </div>
-    <section class="footer">
-        <div class="collect-songs">
-            <svg class="icon-wangyi"><use xlink:href="#icon-wangyi"></use></svg>
-            <span>收藏歌单</span>
-        </div>
-    </section>
 </body>
 <script src="./vendors/jquery.min.js"></script>
 <script src="./script/playlist.js"></script>
 <script src="//at.alicdn.com/t/font_397377_9n5fmmrnyxfrms4i.js"></script>
-<script src="//at.alicdn.com/t/font_406557_hu1la656lpk9ms4i.js"></script>
+<script src="//at.alicdn.com/t/font_406557_gghrogob3vyxecdi.js"></script>
 </html>
