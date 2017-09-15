@@ -2,7 +2,7 @@
  * Created by myl17 on 2017/8/24.
  */
 $(function () {
-    $.get('./database.json').then(function (reponse) {
+    $.get('./playlist.json').then(function (reponse) {
         reponse.forEach((i)=>{
             if(i.id <= 6){
                 let $li = recommendTemplate(i)
@@ -13,7 +13,7 @@ $(function () {
         })
         $('.recommendList .loading').remove()
     },function (error) {
-        alert('error !!!')
+        alert(error)
     })
     $.get('./database.json').then(function (response) {
         response.forEach((i)=>{
@@ -24,7 +24,7 @@ $(function () {
         })
         $('.newestList .loading').remove()
     },function (error) {
-        alert('error!!!')
+        alert(error)
     })
     $.get('./database.json').then(function (response) {
         let index = 0
@@ -41,7 +41,7 @@ $(function () {
         })
         $('.hotSongList .loading').remove()
     },function (error) {
-        alert('error!!!')
+        alert(error)
     })
     $.get('./database.json').then(function (response) {
         response.forEach((i)=>{
@@ -51,7 +51,7 @@ $(function () {
             }
         })
     },function (error) {
-        alert('error!!!')
+        alert(error)
     })
 })
 
@@ -62,7 +62,7 @@ function recommendTemplate(i) {
                              <img src="${i.cover}" alt="推荐歌曲1"/>
                              <span class="listener"><svg class="icon-headset"><use xlink:href="#icon-erjiicon"></use></svg>${i.listener}万</span>
                          </div>
-                         <p class="remd-summary">${i.description}</p>
+                         <p class="remd-summary">${i.title}</p>
                     </a>
                 </li>`)
 }
@@ -92,7 +92,7 @@ function hotSongsTemplate(i,index) {
 function hotSongsTemplate2(i) {
     return $(`<li>
                    <a href="./song.html?id=${i.id}">
-                        <div class="order">${i.id>=10 ? i.id + '' : '0' + i.id}</div>
+                        <div class="order">${i.id>=10 ? i.id : '0' + i.id}</div>
                             <div class="songInfo">
                                 <h3>${i.name}<span></span></h3>
                                 <div class="songIntroduce"><i class="icon-sq"> </i><span>${i.singer} - ${i.name}</span></div>
