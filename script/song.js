@@ -11,11 +11,11 @@ $(function(){
         let song = songs.filter(s=>s.id === id)[0]
         let {url,name,singer,lyric,pagebg,cover} = song
 
+        play(url)
         initImg(pagebg,cover)
         initSongInfo(name,singer,lyric)
-        play(url)
-    },function (error) {
-        alert(error)
+    },function () {
+        console.log('error')
     })
 
     function play(url){
@@ -33,7 +33,6 @@ $(function(){
         audio.onended =function(){
             remove()
         }
-
         setInterval(()=>{
             let seconds = audio.currentTime
             let munites = ~~(seconds / 60)
