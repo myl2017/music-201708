@@ -13,7 +13,7 @@ $(function () {
         })
         $('.recommendList .loading').remove()
     },function (error) {
-        alert('error !!!')
+        alert(error)
     })
     $.get('./database.json').then(function (response) {
         response.forEach((i)=>{
@@ -24,7 +24,7 @@ $(function () {
         })
         $('.newestList .loading').remove()
     },function (error) {
-        alert('error!!!')
+        alert(error)
     })
     $.get('./database.json').then(function (response) {
         let index = 0
@@ -41,7 +41,7 @@ $(function () {
         })
         $('.hotSongList .loading').remove()
     },function (error) {
-        alert('error!!!')
+        alert(error)
     })
     $.get('./database.json').then(function (response) {
         response.forEach((i)=>{
@@ -51,7 +51,7 @@ $(function () {
             }
         })
     },function (error) {
-        alert('error!!!')
+        alert(error)
     })
 })
 
@@ -219,3 +219,4 @@ function parse(request) {
     }
     return data
 }
+

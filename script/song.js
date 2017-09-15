@@ -14,8 +14,8 @@ $(function(){
         initImg(pagebg,cover)
         initSongInfo(name,singer,lyric)
         play(url)
-    },function () {
-        alert('error')
+    },function (error) {
+        alert(error)
     })
 
     function play(url){

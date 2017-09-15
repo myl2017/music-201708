@@ -14,9 +14,8 @@ $(function () {
                 return
             }
         })
-
     },function (error) {
-        alert('error !!!')
+        alert(error)
     })
     $.get('./database.json').then(function (reponse) {
         reponse.forEach((i)=>{
@@ -25,6 +24,8 @@ $(function () {
                 $('.lists .loading').remove()
             }
         })
+    },function (error) {
+        alert(error)
     })
 })
 
