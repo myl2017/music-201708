@@ -47,21 +47,17 @@
     align-items: center;
     margin-top: 19vw;
     position: relative;
-    outline: 1px solid red;
 }
 .disc-container .disc .ring{
     width: 79vw;
-    outline: 1px solid red ;
 }
 .disc-container .disc .light{
-    outline: 1px solid red;
     width: 79vw;
     position: absolute;
     top: 0;
     left: calc(50% - 39.5vw);
 }
 .disc-container .cover{
-    outline: 1px solid red;
     width: 49vw;
     position: absolute;
     top: calc(50% - 24.5vw);
@@ -83,7 +79,6 @@
     left: 43%;
     z-index: 1;
     transform: translateX(-2px);
-    outline: 1px solid red;
 }
 .icon-wrap .icon{
     display: block;
