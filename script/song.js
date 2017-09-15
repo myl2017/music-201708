@@ -15,24 +15,24 @@ $(function(){
         initSongInfo(name,singer,lyric)
         play(url)
     },function () {
-        console.log('error')
+        alert('error')
     })
 
     function play(url){
-        let audio = document.createElement('audio')
-        audio.src = url
-        /*audio.oncanplay = function () {
-            audio.play()
-            add()
-        }*/
-        $('.icon-play').on('touchstart',function () {
+        var audio = document.createElement('audio')
+        audio.src= url
+        document.body.appendChild(audio)
+        $('.icon-play').on('click',function(){
             audio.play()
             add()
         })
-        $('.icon-pause').on('touchstart',function () {
+        $('.icon-pause').on('click',function(){
             audio.pause()
             remove()
         })
+        audio.onended =function(){
+            remove()
+        }
 
         setInterval(()=>{
             let seconds = audio.currentTime

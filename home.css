@@ -68,6 +68,7 @@ section.globalNavigation .tabs-nav > li{
     height: 2px;
     background: #d33a31;
 }
+
 .tab-pannel{
     margin-top: 105px;
     position: relative;
@@ -119,6 +120,9 @@ section.globalNavigation .tabs-nav > li{
     justify-content: center;
     align-items: center;
     margin-bottom: 16px;
+}
+.recommendList .loading{
+    padding: 44%;
 }
 .recommendSongs li a{
     display: block;
@@ -179,15 +183,21 @@ section.globalNavigation .tabs-nav > li{
     padding: 8px 0;
     background: #d33a31;
 }
-.newestList{
-
-}
 .newestList .loading{
     position: relative;
 }
 .newestList .loading > img{
     position: absolute;
     top: 0;
+    left: 45%;
+    margin-bottom: 50px;
+}
+.hotSongList .loading{
+    position: relative;
+}
+.hotSongList .loading > img{
+    position: absolute;
+    top: 50px;
     left: 45%;
     margin-bottom: 50px;
 }
@@ -252,7 +262,6 @@ section.globalNavigation .tabs-nav > li{
     background-position: -24px 0;
     vertical-align: bottom;
 }
-
 .art{
     background: url(./images/recommand_bg_2x.png) no-repeat center;
     background-size: cover;
@@ -404,10 +413,60 @@ section.globalNavigation .tabs-nav > li{
     background: transparent;
     pointer-events: none;
 }
-.records .hotList.active{
+
+.matchList{
+    display: none;
+}
+.matchList.active{
     display: block;
 }
-.records .hotList{
+.matchList h3.matchTitle{
+    height: 50px;
+    margin-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 50px;
+    color: #507daf;
+    border-bottom: .1px solid rgba(136,136,136,.1);
+}
+.searchResult p.empty{
+    margin-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #507daf;
+}
+.searchResult > li > a{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.searchResult > li > a > svg.icon-search{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    fill: #c9c9c9;
+    margin-right: 7px;
+}
+.searchResult > li > a > .matchItem{
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 45px;
+    flex-grow: 1;
+    border-bottom: .1px solid rgba(136,136,136,.1);
+}
+.searchResult .highlight{
+    color: #507daf;
+}
+.noResult{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.records{
+    display: block;
+}
+.records.active{
     display: none;
 }
 .hotList{
@@ -434,12 +493,6 @@ section.globalNavigation .tabs-nav > li{
     color: #333;
     border: .1px solid rgba(136,136,136,.2);
     border-radius: 32px;
-}
-.records .history .history-Info{
-    display: none;
-}
-.records .history .history-Info.active{
-    display: block;
 }
 .history-Info > li{
     padding-top: 15px;
@@ -479,21 +532,4 @@ section.globalNavigation .tabs-nav > li{
     position: relative;
     top: 4px;
     right: 0px;
-}
-.searchResult h3.matchTitle{
-    margin-top: 5px;
-    font-size: 12px;
-    line-height: 16px;
-    color: #666;
-    margin-left: 10px;
-}
-.searchResult > li > a{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 10px;
-    border-bottom: .1px solid rgba(136,136,136,.1);
-}
-.searchResult .highlight{
-    color: #507daf;
 }
