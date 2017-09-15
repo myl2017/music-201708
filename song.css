@@ -12,9 +12,12 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: transparent url(http://p4.music.126.net/ry6_7MKyDHghTWE42--XLw==/17680146974920131.jpg) no-repeat center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     position: relative;
+    z-index: -1;
 }
 .page::after{
     content: '';
@@ -56,46 +59,44 @@
     width: 49vw;
     position: absolute;
     border-radius: 50%;
+    animation: circle 20s infinite linear;
+    animation-play-state: paused;
 }
 
-@media (min-width:414px) {
-    .disc-container .cover{
-        top: 62px;
-        left: 106px;
-    }
+.disc > img.playing{
+    animation-play-state: running;
 }
-@media (min-width:768px) {
-    .disc-container .cover{
-        top: 115px;
-        left: 196px;
-    }
+.icon-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    z-index: 1;
+    transform: translateX(-2px);
 }
-@media (min-width:1024px) {
-    .disc-container .cover{
-        top: 153px;
-        left: 260px;
-    }
+.icon-wrap .icon{
+    display: block;
+    width: 15vw;
+    height: 15vw;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 50%;
+    border: 1px solid white;
+    fill: white;
+    vertical-align: middle;
 }
-@media (min-width:1440px) {
-    .disc-container .cover{
-        top: 214px;
-        left: 366px;
-    }
+.icon-wrap .icon-pause{ display: none;}
+.icon-wrap.playing .icon-pause{ display: block;}
+.icon-wrap.playing .icon-play{ display: none;}
+.song-description .lines{
+    transform: translateY(-5px);
+    transition: tranform .3s;
+    color: white;
 }
-
-@media (max-width:375px) {
-    .disc-container .cover{
-        top: 55px;
-        left: 95px;
-    }
+.song-description p.active{
+    color: white;
 }
-@media (max-width: 320px) {
-    .disc-container .cover{
-        top: 47px;
-        left: 81px;
-    }
-}
-
 .disc > img.playing{
     animation: circle 20s infinite linear;
 }
