@@ -22,6 +22,8 @@ $(function(){
         var audio = document.createElement('audio')
         audio.src= url
         document.body.appendChild(audio)
+        audio.play()
+        add()
         $('.icon-play').on('click',function(){
             audio.play()
             add()
