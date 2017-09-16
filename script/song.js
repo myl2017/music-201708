@@ -46,7 +46,7 @@ $(function(){
                 let currentLineTime = $lines.eq(i).attr('data-time')
                 let nextLineTime = $lines.eq(i+1).attr('data-time')
                 if($lines.eq(i+1).length !== 0 && currentLineTime < time && nextLineTime > time){
-                     $highlight = $lines.eq(i)
+                    $highlight = $lines.eq(i)
                     break
                 }
             }
