@@ -180,7 +180,7 @@
     display: block;
     width: 4vw;
     height: 4vw;
-    background-image: url(./images/arrowdown.png);
+    background-image: url(http://ovg4f07xy.bkt.clouddn.com/arrowdown.png);
     background-repeat: no-repeat;
     background-size: 12px auto;
 }
@@ -197,7 +197,7 @@
     display: block;
     width: 4vw;
     height: 4vw;
-    background-image: url(./images/arrowup.png);
+    background-image: url(http://ovg4f07xy.bkt.clouddn.com/arrowup.png);
     background-repeat: no-repeat;
     background-size: 12px auto;
 }
@@ -262,7 +262,7 @@
     width: 12px;
     height: 8px;
     margin-right: 4px;
-    background: url(./images/sprite.png) no-repeat;
+    background: url(http://ovg4f07xy.bkt.clouddn.com/sprite.png) no-repeat;
     background-size: 166px 97px;
 }
 .playButton{
@@ -272,7 +272,7 @@
     display: inline-block;
     width: 22px;
     height: 22px;
-    background: url(./images/sprite.png) no-repeat;
+    background: url(http://ovg4f07xy.bkt.clouddn.com/sprite.png) no-repeat;
     background-size: 166px 97px;
     background-position: -24px 0;
     vertical-align: middle;

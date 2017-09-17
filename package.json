@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bulid": "webpack",
-    "watch": "webpack -w",
-    "deploy": "webpack -p"
+    "build": "node_modules/.bin/webpack",
+    "watch": "node_modules/.bin/webpack -w",
+    "deploy": "node_modules/.bin/webpack -p"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,18 @@
     "leancloud-storage": "^3.1.1"
   },
   "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-preset-env": "^1.6.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.7.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "r-loader": "^1.0.0",
+    "style-loader": "^0.18.2",
     "webpack": "^3.6.0"
   }
 }

@@ -131,7 +131,7 @@ section.globalNavigation .tabs-nav > li{
 .recommendSongs .cover{
     color: white;
     position: relative;
-    padding-top: 100%;  /***做成一个[一比一]的div**/
+    padding-top: 100%;
 }
 .recommendSongs .cover::after{
     content: " ";
@@ -247,7 +247,7 @@ section.globalNavigation .tabs-nav > li{
     width: 12px;
     height: 8px;
     margin-right: 4px;
-    background: url(./images/sprite.png) no-repeat;
+    background: url(http://ovg4f07xy.bkt.clouddn.com/sprite.png) no-repeat;
     background-size: 166px 97px;
 }
 .playButton{
@@ -257,13 +257,13 @@ section.globalNavigation .tabs-nav > li{
     display: inline-block;
     width: 22px;
     height: 22px;
-    background: url(./images/sprite.png) no-repeat;
+    background: url(http://ovg4f07xy.bkt.clouddn.com/sprite.png) no-repeat;
     background-size: 166px 97px;
     background-position: -24px 0;
     vertical-align: bottom;
 }
 .art{
-    background: url(./images/recommand_bg_2x.png) no-repeat center;
+    background: url(http://ovg4f07xy.bkt.clouddn.com/recommandbg2x.png) no-repeat center;
     background-size: cover;
     text-align: center;
     padding-bottom: 16px;
@@ -297,7 +297,7 @@ section.globalNavigation .tabs-nav > li{
 
 .pannel-2{}
 .pannel-2 .hotMusicBackground{
-    background: url(./images/hot_music_bg_2x.jpg) no-repeat;
+    background: url(http://ovg4f07xy.bkt.clouddn.com/hotmusicbg2x.jpg) no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -320,7 +320,7 @@ section.globalNavigation .tabs-nav > li{
 .pannel-2 .hotMusicBackground > .hotSprites{
     width: 142px;
     height: 67px;
-    background: url(./images/sprite.png) no-repeat;
+    background: url(http://ovg4f07xy.bkt.clouddn.com/sprite.png) no-repeat;
     background-size: 166px 97px;
     background-position: -24px -30px;
     position: absolute;
@@ -531,5 +531,5 @@ section.globalNavigation .tabs-nav > li{
     fill: #999;
     position: relative;
     top: 4px;
-    right: 0px;
+    right: 0;
 }
