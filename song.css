@@ -8,6 +8,10 @@
     }
 }
 
+body{
+    position:relative;
+    z-index:0
+}
 .page{
     display: flex;
     flex-direction: column;
@@ -54,10 +58,14 @@
 .disc-container .disc .light{
     width: 79vw;
     position: absolute;
+    top: 0;
+    left: calc(50% - 39.5vw);
 }
 .disc-container .cover{
     width: 49vw;
     position: absolute;
+    top: calc(50% - 24.5vw);
+    left: calc(50% - 24.5vw);
     border-radius: 50%;
     animation: circle 20s infinite linear;
     animation-play-state: paused;

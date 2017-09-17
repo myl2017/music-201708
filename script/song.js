@@ -11,17 +11,19 @@ $(function(){
         let song = songs.filter(s=>s.id === id)[0]
         let {url,name,singer,lyric,pagebg,cover} = song
 
+        play(url)
         initImg(pagebg,cover)
         initSongInfo(name,singer,lyric)
-        play(url)
-    },function (error) {
-        alert(error)
+    },function () {
+        console.log('error')
     })
 
     function play(url){
         var audio = document.createElement('audio')
         audio.src= url
         document.body.appendChild(audio)
+        audio.play()
+        add()
         $('.icon-play').on('click',function(){
             audio.play()
             add()
@@ -33,7 +35,6 @@ $(function(){
         audio.onended =function(){
             remove()
         }
-
         setInterval(()=>{
             let seconds = audio.currentTime
             let munites = ~~(seconds / 60)
@@ -45,7 +46,7 @@ $(function(){
                 let currentLineTime = $lines.eq(i).attr('data-time')
                 let nextLineTime = $lines.eq(i+1).attr('data-time')
                 if($lines.eq(i+1).length !== 0 && currentLineTime < time && nextLineTime > time){
-                     $highlight = $lines.eq(i)
+                    $highlight = $lines.eq(i)
                     break
                 }
             }
