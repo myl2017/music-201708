@@ -1,0 +1,207 @@
+/*****************song css****************/
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+body{
+    position:relative;
+    z-index:0
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+.page::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.5);
+    z-index: 0;
+}
+.disc-container{
+    position: relative;
+    z-index: 1;
+}
+.disc-container .pointer{
+    width: 25.6vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-4vw);
+    z-index: 1;
+}
+.disc-container .disc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 19vw;
+    position: relative;
+}
+.disc-container .disc .ring{
+    width: 79vw;
+}
+.disc-container .disc .light{
+    width: 79vw;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 39.5vw);
+}
+.disc-container .cover{
+    width: 49vw;
+    position: absolute;
+    top: calc(50% - 24.5vw);
+    left: calc(50% - 24.5vw);
+    border-radius: 50%;
+    animation: circle 20s infinite linear;
+    animation-play-state: paused;
+}
+
+.disc > img.playing{
+    animation-play-state: running;
+}
+.icon-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    z-index: 1;
+    transform: translateX(-2px);
+}
+.icon-wrap .icon{
+    display: block;
+    width: 15vw;
+    height: 15vw;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 50%;
+    border: 1px solid white;
+    fill: white;
+    vertical-align: middle;
+}
+.icon-wrap .icon-pause{ display: none;}
+.icon-wrap.playing .icon-pause{ display: block;}
+.icon-wrap.playing .icon-play{ display: none;}
+.song-description .lines{
+    transform: translateY(-5px);
+    transition: tranform .3s;
+    color: white;
+}
+.song-description p.active{
+    color: white;
+}
+.disc > img.playing{
+    animation: circle 20s infinite linear;
+}
+.icon-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 43%;
+    z-index: 1;
+    transform: translateX(-2px);
+}
+.icon-wrap .icon{
+    display: block;
+    width: 15vw;
+    height: 15vw;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 50%;
+    border: 1px solid white;
+    fill: white;
+    vertical-align: middle;
+}
+.icon-wrap .icon-pause{ display: none;}
+.icon-wrap.playing .icon-pause{ display: block;}
+.icon-wrap.playing .icon-play{ display: none;}
+.icon-wrap .icon-play{ display: block;}
+
+.song-description{
+    flex-grow: 1;
+    color: #aeabac;
+    text-align: center;
+    line-height: 2;
+    margin-top: 25px;
+    position: relative;
+    z-index: 1;
+}
+.song-description > .songInfo{
+    padding: 0 35px;
+}
+.song-description h1{
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.1;
+    color: #fefefe;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.song-description .author{
+    margin: 0 4px;
+    font-size: 16px;
+    color: hsla(0,0%,100%,.6);
+}
+.song-description p{
+    font-size: 16px;
+    color: hsla(0,0%,100%,.6);
+}
+.song-description .lyric{
+    height: 88px;
+    overflow: hidden;
+    margin-top: 14px;
+}
+.song-description .lines{
+    transform: translateY(-5px);
+}
+.song-description p.active{
+    color: rgb(255, 255, 255);
+}
+.page > .links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+a.s-open,a.s-download{
+    display: block;
+}
+.page > .links > a{
+    width: 37.4vw;
+    text-align: center;
+    color: #d43b32;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid #D43B32;
+    border-radius: 1.3vw;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    letter-spacing: 1vw;
+}
+.links > a.s-open{
+    margin-right: 7px;
+}
+.links > a.s-download{
+    background: #D43B32;
+    color: white;
+    margin-left: 7px;
+}

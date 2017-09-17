@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bulid":"webpack",
-    "watch":"webpack -w",
-    "deploy":"webpack -p"
+    "bulid": "webpack",
+    "watch": "webpack -w",
+    "deploy": "webpack -p"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
     "leancloud-storage": "^3.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^3.6.0"
   }
 }
